@@ -1,16 +1,21 @@
-# This is a sample Python script.
+def div42by(divideBy):
+    try:
+        return 42 / divideBy
+    except ZeroDivisionError:
+        return 'Error: You tried to divide by zero.'
 
-# Press ⌃F5 to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+def how_many_cats():
+    print('How many cats do you have?')
+    numCats = input()
+    try:
+        if int(numCats) > 0:
+            print('Meow ' * int(numCats))
+        else:
+            print("You don't have cats")
+    except ValueError:
+        print("You didn't enter a number.")
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press F9 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+how_many_cats()
+print(div42by(2))
+print(div42by(12))
+print(div42by(0))
